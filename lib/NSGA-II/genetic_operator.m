@@ -137,7 +137,7 @@ for i = 1 : N
                delta(j) = 1 - (2*(1 - r(j)))^(1/(mum+1));
            end
            % Generate the corresponding child element.
-           child_3(j) = child_3(j) + delta(j);
+           child_3(j) = child_3(j) + delta(j)*( u_limit(j) - l_limit(j) );
            % Make sure that the generated element is within the decision
            % space.
            if child_3(j) > u_limit(j)
